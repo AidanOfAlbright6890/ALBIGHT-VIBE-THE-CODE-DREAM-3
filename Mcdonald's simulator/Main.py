@@ -1,3 +1,5 @@
+# Credit for the obackroundimage code snippet goes to Irv Kalb's Solo Code 5 - GUI TEMPERATURE CONVERTER
+# Credit for idea for oscreen code also goes to the obackroundimage snippet from Irv Kalb's Solo Code 5 - GUI TEMPERATURE CONVERTER 
 import pygame
 import pygwidgets
 import sys
