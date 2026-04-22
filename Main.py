@@ -4,7 +4,7 @@ import pygame
 import pygwidgets
 import sys
 from characters import *
-from pygame.locals import *
+from pygame.locals import * 
 WINDOW_WIDTH = 840
 WINDOW_HEIGHT = 680
 FRAMES_PER_SECOND = 30
@@ -87,5 +87,23 @@ def run():
         oplaybutton3.draw()
         pygame.display.flip()
 
-        clock.tick(FRAMES_PER_SECOND)
+class Character:
+    def __init__(self, window, image_path, pos, picPaths, duration):
+        self.image = pygame.image.load(image_path)
+        self.rect = self.image.get_rect(topleft=pos)
+        self.window = window
+
+    def draw(self):
+        self.window.blit(self.image, self.rect) 
+class Itemlist:
+    def __init__(self):
+        self.items = []
+    itemlist = []
+    itemlist.append(Character(window, 'French_Fries.webp', (100, 200), itemlist, .1))
+    itemlist.append(Character(window, 'cheeseburger.png', (250,200), itemlist, .1))
+    itemlist.append(Character(window, 'Big mac.png', (400,200), itemlist, .1)) 
+    itemlist.append(Character(window,'Mchicken.png', (550,200), itemlist, .1))  
 run()
+
+
+
